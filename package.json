@@ -1,0 +1,22 @@
+{
+  "name": "crash-course",
+  "version": "1.0.0",
+  "description": "Node.js Crash Course",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DICKSON-hub32/NODE-CRASH-COURSE.git"
+  },
+  "keywords": [
+    "practice"
+  ],
+  "author": "Dickson Esamai",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DICKSON-hub32/NODE-CRASH-COURSE/issues"
+  },
+  "homepage": "https://github.com/DICKSON-hub32/NODE-CRASH-COURSE#readme"
+}
