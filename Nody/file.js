@@ -9,3 +9,6 @@ console.log(data.toString());
 });
 
 // Writing files
+fs.writeFile('./docs/blog2.txt', 'Hello World', () => {
+    console.log('file was written');
+});
