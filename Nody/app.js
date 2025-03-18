@@ -23,7 +23,7 @@ app.get('/about', (req, res) => {
 app.get('/about-us', (req, res) => {
     res.redirect('/about');
 });
-
+ 
 // 404 page
 app.use((req, res) => {
 
