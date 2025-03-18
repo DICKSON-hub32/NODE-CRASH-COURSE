@@ -1,7 +1,12 @@
 const express = require('express');
+const morgan = require('morgan');
+
 
 //express app
 const app = express();
+
+// connect to mongodb & listen for requests
+const dbURI = 'mongodb+srv://Dickson:test123@nodetuts.cynub.mongodb.net/?retryWrites=true&w=majority&appName=nodetuts';
 
 // register view engine
 app.set('view engine', 'ejs');
@@ -10,18 +15,9 @@ app.set('view engine', 'ejs');
 app.listen(3000);
 
 
-app.use((req, res, next) => {
-    console.log('new request made:');
-    console.log('host:', req.hostname);
-    console.log('path:', req.path);
-    console.log('method:', req.method);
-    next();
-});
-
-app.use((req, res, next) => {
-    console.log('In the next middleware');
-    next();
-});
+// middleware & static files
+app.use(express.static('public'));
+app.use(morgan('dev'));
 
 
 app.get('/', (req, res) => {
