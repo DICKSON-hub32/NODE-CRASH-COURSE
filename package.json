@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/DICKSON-hub32/NODE-CRASH-COURSE/issues"
   },
-  "homepage": "https://github.com/DICKSON-hub32/NODE-CRASH-COURSE#readme"
+  "homepage": "https://github.com/DICKSON-hub32/NODE-CRASH-COURSE#readme",
+  "dependencies": {
+    "mongoose": "^8.12.1"
+  }
 }
