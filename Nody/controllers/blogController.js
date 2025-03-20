@@ -6,7 +6,7 @@ const Blog = require('../models/blog');     // Import the Blog model
 const blog_index = (req, res) => {     //controller for the home page
     Blog.find().sort({ createdAt: -1 })
         .then((result) => {
-            res.render('index', { title: 'All Blogs', blogs: result })
+            res.render('blogs/index', { title: 'All Blogs', blogs: result })
         })
         .catch((err) => {
             console.log(err);
@@ -18,7 +18,7 @@ const blog_details = (req, res) => {
 
     Blog.findById(id)
         .then((result) => {
-            res.render('details', { blog: result, title: 'Blog Details' });
+            res.render('blogs/details', { blog: result, title: 'Blog Details' });
         })
         .catch((err) => {
             console.log(err);
@@ -26,7 +26,7 @@ const blog_details = (req, res) => {
 }    //controller for the details page
 
 const blog_create_get = (req, res) => {
-    res.render('create', { title: 'Create a new blog' });
+    res.render('blogs/create', { title: 'Create a new blog' });
 }
 
 const blog_create_post = (req, res) => {
